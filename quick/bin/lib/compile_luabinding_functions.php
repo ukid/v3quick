@@ -274,8 +274,8 @@ class Builder
 extern "C" {
 #include "lua.h"
 #include "tolua++.h"
-#include "tolua_fix.h"
 }
+#include "tolua_fix.h"
 
 TOLUA_API int ${functionName}(lua_State* tolua_S);
 
