@@ -418,6 +418,8 @@ int PlayerWin::run()
 
     const Rect frameRect = Rect(0, 0, frameSize.width, frameSize.height);
     const bool isResize = _project.isResizeWindow();
+    GLContextAttrs glContextAttrs = {8, 8, 8, 8, 24, 8};
+    GLView::setGLContextAttrs(glContextAttrs);
     //auto glview = GLView::createWithRect("quick-cocos2d-x", frameRect, frameScale, isResize, false, true);
     auto glview = GLViewImpl::createWithRect("quick-cocos2d-x", frameRect, frameScale);
     _hwnd = glview->getWin32Window();
