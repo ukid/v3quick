@@ -275,6 +275,21 @@ char* Crypto::bin2hex(unsigned char* bin, int binLength)
     return hex;
 }
 
+LUA_STRING Crypto::MD5StringLua(char* input, int inputLength)
+{
+    unsigned char buffer[MD5_BUFFER_LENGTH];
+    MD5(static_cast<void*>(input), inputLength, buffer);
+    
+    LuaStack* stack = LuaEngine::getInstance()->getLuaStack();
+    stack->clean();
+    
+    char* hex = bin2hex(buffer, MD5_BUFFER_LENGTH);
+    stack->pushString(hex);
+    delete[] hex;
+    
+    return 1;
+}
+
 #endif
 
 NS_CC_EXTRA_END
