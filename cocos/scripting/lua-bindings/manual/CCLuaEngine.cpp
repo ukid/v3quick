@@ -81,6 +81,12 @@ void LuaEngine::removeScriptHandler(int nHandler)
     _stack->removeScriptHandler(nHandler);
 }
 
+void LuaEngine::removeTouchNodeEvent(Node *node)
+{
+	extern int removeTouchNodeEvent(Node *node);
+	removeTouchNodeEvent(node);
+}
+
 int LuaEngine::executeString(const char *codes)
 {
     int ret = _stack->executeString(codes);
