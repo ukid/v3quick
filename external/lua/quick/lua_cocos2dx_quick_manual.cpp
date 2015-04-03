@@ -281,7 +281,7 @@ tolua_lerror:
 #endif
 }
 
-int removeTouchNodeEvent(Node *node)
+int removeLuaTouchNode(Node *node)
 {
 	auto mng = LuaNodeManager::getInstance();
 	auto lnode = mng->getLuaNodeByNode(node, false);
@@ -310,7 +310,7 @@ static int tolua_Cocos2d_Node_removeTouchEvent(lua_State* tolua_S)
 #if COCOS2D_DEBUG >= 1
         if (!node) tolua_error(tolua_S,"invalid 'self' in function 'removeTouchEvent'", nullptr);
 #endif
-		removeTouchNodeEvent(node);
+		removeLuaTouchNode(node);
     }
     lua_settop(tolua_S, 1);
     return 1;

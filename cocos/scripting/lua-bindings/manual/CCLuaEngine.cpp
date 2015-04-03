@@ -33,6 +33,8 @@
 #include "lua_cocos2dx_coco_studio_manual.hpp"
 #include "lua_cocos2dx_ui_manual.hpp"
 
+extern int removeLuaTouchNode(Node *node);
+
 NS_CC_BEGIN
 
 LuaEngine* LuaEngine::_defaultEngine = nullptr;
@@ -83,8 +85,7 @@ void LuaEngine::removeScriptHandler(int nHandler)
 
 void LuaEngine::removeTouchNodeEvent(Node *node)
 {
-	extern int removeTouchNodeEvent(Node *node);
-	removeTouchNodeEvent(node);
+	removeLuaTouchNode(node);
 }
 
 int LuaEngine::executeString(const char *codes)
