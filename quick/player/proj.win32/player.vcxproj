@@ -469,6 +469,9 @@ xcopy /Y /Q "$(TargetPath)" "$(ProjectDir)..\win32\"</Command>
     <ClCompile Include="UncaughtExceptionHandler_win32.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\cocos\editor-support\dragonbones\renderer\cocos2d-x-3.x\proj.win32\libDragonbones.vcxproj">
+      <Project>{2633e5d1-c31e-466b-844c-67e6b82d9682}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\cocos\scripting\lua-bindings\proj.win32\libluacocos2d.vcxproj">
       <Project>{9f2d6ce6-c893-4400-b50c-6db70cc2562f}</Project>
     </ProjectReference>

@@ -1,123 +1,124 @@
 
 --------------------------------
 -- @module Animation
--- @extend Ref
--- @parent_module cc
+-- @parent_module db
 
 --------------------------------
---  Gets the times the animation is going to loop. 0 means animation is not animated. 1, animation is executed one time, ... 
--- @function [parent=#Animation] getLoops 
--- @param self
--- @return unsigned int#unsigned int ret (return value: unsigned int)
-        
---------------------------------
---  Adds a SpriteFrame to a Animation.<br>
--- The frame will be added with one "delay unit".
--- @function [parent=#Animation] addSpriteFrame 
--- @param self
--- @param #cc.SpriteFrame frame
--- @return Animation#Animation self (return value: cc.Animation)
-        
---------------------------------
---  Sets whether to restore the original frame when animation finishes 
--- @function [parent=#Animation] setRestoreOriginalFrame 
--- @param self
--- @param #bool restoreOriginalFrame
--- @return Animation#Animation self (return value: cc.Animation)
-        
---------------------------------
 -- 
--- @function [parent=#Animation] clone 
--- @param self
--- @return Animation#Animation ret (return value: cc.Animation)
-        
---------------------------------
---  Gets the duration in seconds of the whole animation. It is the result of totalDelayUnits * delayPerUnit 
--- @function [parent=#Animation] getDuration 
--- @param self
--- @return float#float ret (return value: float)
-        
---------------------------------
---  Sets the array of AnimationFrames 
--- @function [parent=#Animation] setFrames 
--- @param self
--- @param #array_table frames
--- @return Animation#Animation self (return value: cc.Animation)
-        
---------------------------------
---  Gets the array of AnimationFrames 
--- @function [parent=#Animation] getFrames 
+-- @function [parent=#Animation] getAnimationList 
 -- @param self
 -- @return array_table#array_table ret (return value: array_table)
         
 --------------------------------
---  Sets the times the animation is going to loop. 0 means animation is not animated. 1, animation is executed one time, ... 
--- @function [parent=#Animation] setLoops 
+-- 
+-- @function [parent=#Animation] setTimeScale 
 -- @param self
--- @param #unsigned int loops
--- @return Animation#Animation self (return value: cc.Animation)
+-- @param #float timeScale
+-- @return Animation#Animation self (return value: db.Animation)
         
 --------------------------------
---  Sets the delay in seconds of the "delay unit" 
--- @function [parent=#Animation] setDelayPerUnit 
+-- 
+-- @function [parent=#Animation] stop 
 -- @param self
--- @param #float delayPerUnit
--- @return Animation#Animation self (return value: cc.Animation)
+-- @return Animation#Animation self (return value: db.Animation)
         
 --------------------------------
---  Adds a frame with an image filename. Internally it will create a SpriteFrame and it will add it.<br>
--- The frame will be added with one "delay unit".<br>
--- Added to facilitate the migration from v0.8 to v0.9.
--- @function [parent=#Animation] addSpriteFrameWithFile 
+-- 
+-- @function [parent=#Animation] clear 
 -- @param self
--- @param #string filename
--- @return Animation#Animation self (return value: cc.Animation)
+-- @return Animation#Animation self (return value: db.Animation)
         
 --------------------------------
---  Gets the total Delay units of the Animation. 
--- @function [parent=#Animation] getTotalDelayUnits 
+-- 
+-- @function [parent=#Animation] dispose 
 -- @param self
--- @return float#float ret (return value: float)
+-- @return Animation#Animation self (return value: db.Animation)
         
 --------------------------------
---  Gets the delay in seconds of the "delay unit" 
--- @function [parent=#Animation] getDelayPerUnit 
+-- 
+-- @function [parent=#Animation] play 
 -- @param self
--- @return float#float ret (return value: float)
+-- @return Animation#Animation self (return value: db.Animation)
         
 --------------------------------
---  Checks whether to restore the original frame when animation finishes. 
--- @function [parent=#Animation] getRestoreOriginalFrame 
+-- 
+-- @function [parent=#Animation] hasAnimation 
+-- @param self
+-- @param #string animationName
+-- @return bool#bool ret (return value: bool)
+        
+--------------------------------
+-- 
+-- @function [parent=#Animation] getLastAnimationState 
+-- @param self
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
+        
+--------------------------------
+-- 
+-- @function [parent=#Animation] gotoAndPlay 
+-- @param self
+-- @param #string animationName
+-- @param #float fadeInTime
+-- @param #float duration
+-- @param #int playTimes
+-- @param #int layer
+-- @param #string group
+-- @param #int fadeOutMode
+-- @param #bool pauseFadeOut
+-- @param #bool pauseFadeIn
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
+        
+--------------------------------
+-- 
+-- @function [parent=#Animation] getState 
+-- @param self
+-- @param #string name
+-- @param #int layer
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
+        
+--------------------------------
+-- 
+-- @function [parent=#Animation] getIsComplete 
 -- @param self
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
---  Adds a frame with a texture and a rect. Internally it will create a SpriteFrame and it will add it.<br>
--- The frame will be added with one "delay unit".<br>
--- Added to facilitate the migration from v0.8 to v0.9.
--- @function [parent=#Animation] addSpriteFrameWithTexture 
+-- 
+-- @function [parent=#Animation] advanceTime 
 -- @param self
--- @param #cc.Texture2D pobTexture
--- @param #rect_table rect
--- @return Animation#Animation self (return value: cc.Animation)
+-- @param #float passedTime
+-- @return Animation#Animation self (return value: db.Animation)
         
 --------------------------------
--- @overload self, array_table, float, unsigned int         
--- @overload self         
--- @function [parent=#Animation] create
+-- 
+-- @function [parent=#Animation] getIsPlaying 
 -- @param self
--- @param #array_table arrayOfAnimationFrameNames
--- @param #float delayPerUnit
--- @param #unsigned int loops
--- @return Animation#Animation ret (return value: cc.Animation)
-
+-- @return bool#bool ret (return value: bool)
+        
 --------------------------------
 -- 
--- @function [parent=#Animation] createWithSpriteFrames 
+-- @function [parent=#Animation] gotoAndStop 
 -- @param self
--- @param #array_table arrayOfSpriteFrameNames
--- @param #float delay
--- @param #unsigned int loops
--- @return Animation#Animation ret (return value: cc.Animation)
+-- @param #string animationName
+-- @param #float time
+-- @param #float normalizedTime
+-- @param #float fadeInTime
+-- @param #float duration
+-- @param #int layer
+-- @param #string group
+-- @param #int fadeOutMode
+-- @return AnimationState#AnimationState ret (return value: db.AnimationState)
+        
+--------------------------------
+-- 
+-- @function [parent=#Animation] getTimeScale 
+-- @param self
+-- @return float#float ret (return value: float)
+        
+--------------------------------
+-- 
+-- @function [parent=#Animation] Animation 
+-- @param self
+-- @return Animation#Animation self (return value: db.Animation)
         
 return nil

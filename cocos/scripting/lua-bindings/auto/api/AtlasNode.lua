@@ -34,7 +34,7 @@
 -- 
 -- @function [parent=#AtlasNode] getQuadsToDraw 
 -- @param self
--- @return int#int ret (return value: int)
+-- @return long#long ret (return value: long)
         
 --------------------------------
 -- 
@@ -47,7 +47,7 @@
 -- 
 -- @function [parent=#AtlasNode] setQuadsToDraw 
 -- @param self
--- @param #int quadsToDraw
+-- @param #long quadsToDraw
 -- @return AtlasNode#AtlasNode self (return value: cc.AtlasNode)
         
 --------------------------------

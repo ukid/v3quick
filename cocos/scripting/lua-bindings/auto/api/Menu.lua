@@ -24,6 +24,12 @@
 -- @return bool#bool ret (return value: bool)
         
 --------------------------------
+--  align items horizontally 
+-- @function [parent=#Menu] alignItemsHorizontally 
+-- @param self
+-- @return Menu#Menu self (return value: cc.Menu)
+        
+--------------------------------
 --  align items horizontally with padding<br>
 -- since v0.7.2
 -- @function [parent=#Menu] alignItemsHorizontallyWithPadding 
@@ -37,12 +43,6 @@
 -- @function [parent=#Menu] alignItemsVerticallyWithPadding 
 -- @param self
 -- @param #float padding
--- @return Menu#Menu self (return value: cc.Menu)
-        
---------------------------------
---  align items horizontally 
--- @function [parent=#Menu] alignItemsHorizontally 
--- @param self
 -- @return Menu#Menu self (return value: cc.Menu)
         
 --------------------------------

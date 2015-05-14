@@ -189,14 +189,6 @@
 -- @return vec2_table#vec2_table ret (return value: vec2_table)
         
 --------------------------------
--- set the enable value.<br>
--- if the body it isn't enabled, it will not has simulation by world
--- @function [parent=#PhysicsBody] setEnable 
--- @param self
--- @param #bool enable
--- @return PhysicsBody#PhysicsBody self (return value: cc.PhysicsBody)
-        
---------------------------------
 --  set the body is affected by the physics world's gravitational force or not. 
 -- @function [parent=#PhysicsBody] setGravityEnable 
 -- @param self
@@ -267,6 +259,14 @@
 -- @function [parent=#PhysicsBody] setAngularVelocity 
 -- @param self
 -- @param #float velocity
+-- @return PhysicsBody#PhysicsBody self (return value: cc.PhysicsBody)
+        
+--------------------------------
+-- set the enable value.<br>
+-- if the body it isn't enabled, it will not has simulation by world
+-- @function [parent=#PhysicsBody] setEnable 
+-- @param self
+-- @param #bool enable
 -- @return PhysicsBody#PhysicsBody self (return value: cc.PhysicsBody)
         
 --------------------------------
