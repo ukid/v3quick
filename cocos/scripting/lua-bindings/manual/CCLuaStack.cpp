@@ -54,6 +54,8 @@ extern "C" {
 #include "lua_cocos2dx_experimental_auto.hpp"
 #include "lua_cocos2dx_experimental_manual.hpp"
 
+#include "lua_dragonbones_auto.hpp"
+
 
 namespace {
 int lua_print(lua_State * luastate)
@@ -205,6 +207,8 @@ bool LuaStack::init(void)
 #endif
     register_all_cocos2dx_deprecated(_state);
     register_all_cocos2dx_manual_deprecated(_state);
+
+	register_all_dragonbones(_state);
     
     tolua_script_handler_mgr_open(_state);
 

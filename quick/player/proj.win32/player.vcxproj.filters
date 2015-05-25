@@ -731,6 +731,7 @@
     <ClCompile Include="..\Classes\runtime\FileServer.cpp">
       <Filter>Classes\runtime</Filter>
     </ClCompile>
+    <ClCompile Include="UncaughtExceptionHandler_win32.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="player3.ico">

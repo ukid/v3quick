@@ -5,12 +5,6 @@
 -- @parent_module ccs
 
 --------------------------------
--- 
--- @function [parent=#ArmatureDataManager] getAnimationDatas 
--- @param self
--- @return map_table#map_table ret (return value: map_table)
-        
---------------------------------
 -- brief	remove animation data<br>
 -- param 	id the id of the animation data
 -- @function [parent=#ArmatureDataManager] removeAnimationData 
@@ -128,6 +122,12 @@
 -- @param #ccs.TextureData textureData
 -- @param #string configFilePath
 -- @return ArmatureDataManager#ArmatureDataManager self (return value: ccs.ArmatureDataManager)
+        
+--------------------------------
+-- 
+-- @function [parent=#ArmatureDataManager] getAnimationDatas 
+-- @param self
+-- @return map_table#map_table ret (return value: map_table)
         
 --------------------------------
 -- brief	Juge whether or not need auto load sprite file

@@ -9,7 +9,7 @@
 -- param idx index to find a cell
 -- @function [parent=#TableView] updateCellAtIndex 
 -- @param self
--- @param #int idx
+-- @param #long idx
 -- @return TableView#TableView self (return value: cc.TableView)
         
 --------------------------------
@@ -17,13 +17,6 @@
 -- @function [parent=#TableView] setVerticalFillOrder 
 -- @param self
 -- @param #int order
--- @return TableView#TableView self (return value: cc.TableView)
-        
---------------------------------
--- 
--- @function [parent=#TableView] scrollViewDidZoom 
--- @param self
--- @param #cc.ScrollView view
 -- @return TableView#TableView self (return value: cc.TableView)
         
 --------------------------------
@@ -43,7 +36,7 @@
 -- param idx index to find a cell
 -- @function [parent=#TableView] removeCellAtIndex 
 -- @param self
--- @param #int idx
+-- @param #long idx
 -- @return TableView#TableView self (return value: cc.TableView)
         
 --------------------------------
@@ -68,11 +61,18 @@
 -- @return TableView#TableView self (return value: cc.TableView)
         
 --------------------------------
+-- 
+-- @function [parent=#TableView] scrollViewDidZoom 
+-- @param self
+-- @param #cc.ScrollView view
+-- @return TableView#TableView self (return value: cc.TableView)
+        
+--------------------------------
 -- Inserts a new cell at a given index<br>
 -- param idx location to insert
 -- @function [parent=#TableView] insertCellAtIndex 
 -- @param self
--- @param #int idx
+-- @param #long idx
 -- @return TableView#TableView self (return value: cc.TableView)
         
 --------------------------------
@@ -81,7 +81,7 @@
 -- return a cell at a given index
 -- @function [parent=#TableView] cellAtIndex 
 -- @param self
--- @param #int idx
+-- @param #long idx
 -- @return TableViewCell#TableViewCell ret (return value: cc.TableViewCell)
         
 --------------------------------
