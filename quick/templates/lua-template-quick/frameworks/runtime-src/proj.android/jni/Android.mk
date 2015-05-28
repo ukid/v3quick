@@ -55,16 +55,6 @@ ifeq ($(NDK_DEBUG),1)
 LOCAL_STATIC_LIBRARIES += cocos_protobuf-lite_static
 endif
 
-#dragonbones
-LOCAL_C_INCLUDES += 
-$(LOCAL_PATH)/../../editor-support/dragonbones 
-$(LOCAL_PATH)/../../editor-support/dragonbones/renderer/cocos2d-x-3.x 
-
-LOCAL_CFLAGS += -DDRAGON_BONES_ENABLE_LUA=1
-
-LOCAL_WHOLE_STATIC_LIBRARIES += dragonbones_static
-#end
-
 include $(BUILD_SHARED_LIBRARY)
 
 $(call import-module,scripting/lua-bindings/proj.android)
@@ -76,8 +66,5 @@ $(call import-module, protobuf-lite)
 #anysdk
 $(call import-module,protocols/android)
 
-LOCAL_SRC_FILES += auto/lua_dragonbones_auto.cpp 
-
 #dragonbones
-$(call import-module,editor-support/dragonbones/renderer/cocos2d-x-3.x/android)
-#end
+APP_CPPFLAGS += -DDRAGON_BONES_ENABLE_LUA=1

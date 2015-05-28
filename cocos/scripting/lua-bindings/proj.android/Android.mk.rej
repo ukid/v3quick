@@ -1,0 +1,24 @@
+diff a/cocos/scripting/lua-bindings/proj.android/Android.mk b/cocos/scripting/lua-bindings/proj.android/Android.mk	(rejected hunks)
+@@ -187,6 +187,22 @@
+ 
+ include $(BUILD_STATIC_LIBRARY)
+ 
++
++#Add by weizi
++LOCAL_SRC_FILES += auto/lua_dragonbones_auto.cpp 
++
++LOCAL_C_INCLUDES += 
++$(LOCAL_PATH)/../../editor-support/dragonbones 
++$(LOCAL_PATH)/../../editor-support/dragonbones/renderer/cocos2d-x-3.x 
++
++LOCAL_CFLAGS += -DDRAGON_BONES_ENABLE_LUA=1
++
++LOCAL_WHOLE_STATIC_LIBRARIES += dragonbones_static
++
++$(call import-module,editor-support/dragonbones/renderer/cocos2d-x-3.x/android)
++#end
++
++
+ #$(call import-module,lua/luajit/prebuilt/android)
+ $(call import-module,lua/lua)
+ $(call import-module,.)

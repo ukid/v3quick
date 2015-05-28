@@ -31,23 +31,22 @@ LOCAL_C_INCLUDES := \
 $(LOCAL_PATH)/.. \
 $(LOCAL_PATH)/../../.. 
 
+#liblua
+LOCAL_C_INCLUDES += \
+$(LOCAL_PATH)/../../../../../scripting/lua-bindings/manual \
+$(LOCAL_PATH)/../../../../../../external/lua/tolua \
+$(LOCAL_PATH)/../../../../../../external/lua/luajit/include
+
 LOCAL_EXPORT_C_INCLUDES := \
 $(LOCAL_PATH)/.. \
 $(LOCAL_PATH)/../../.. 
 
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos2dx_static
+LOCAL_WHOLE_STATIC_LIBRARIES += cocos_lua_static
 
 LOCAL_CFLAGS += -Wno-psabi
-LOCAL_EXPORT_CFLAGS += -Wno-psabi
-
-#liblua add by weizi
-LOCAL_C_INCLUDES += 
-$(LOCAL_PATH)/../../../../../scripting/lua-bindings/manual 
-$(LOCAL_PATH)/../../../../../../external/lua/tolua 
-$(LOCAL_PATH)/../../../../../../external/lua/luajit/include
-LOCAL_WHOLE_STATIC_LIBRARIES += cocos_lua_static
 LOCAL_CFLAGS += -DDRAGON_BONES_ENABLE_LUA=1
-#end
+LOCAL_EXPORT_CFLAGS += -Wno-psabi
 
 include $(BUILD_STATIC_LIBRARY)
 

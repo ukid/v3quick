@@ -135,6 +135,9 @@ LOCAL_SRC_FILES += \
 endif
 LOCAL_SRC_FILES += ../manual/extension/lua_cocos2dx_extension_manual.cpp \
                    ../auto/lua_cocos2dx_extension_auto.cpp \
+                   
+#dragonbones
+LOCAL_SRC_FILES += ../auto/lua_dragonbones_auto.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                     $(LOCAL_PATH)/../../../../external/lua/luajit/include \
@@ -164,6 +167,10 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                     $(LOCAL_PATH)/../../../../external/lua \
                     $(LOCAL_PATH)/../../../../external/lua/quick
 
+LOCAL_C_INCLUDES += \
+$(LOCAL_PATH)/../../../editor-support/dragonbones \
+$(LOCAL_PATH)/../../../editor-support/dragonbones/renderer/cocos2d-x-3.x  
+
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                            $(LOCAL_PATH)/../../../../external/lua/luajit/include \
                            $(LOCAL_PATH)/../auto \
@@ -182,27 +189,15 @@ LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                            $(LOCAL_PATH)/../../../..
 
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2d_lua_android_static
+LOCAL_WHOLE_STATIC_LIBRARIES += dragonbones_static
 
 LOCAL_STATIC_LIBRARIES := cocos2dx_static
 
-include $(BUILD_STATIC_LIBRARY)
-
-
-#Add by weizi
-LOCAL_SRC_FILES += auto/lua_dragonbones_auto.cpp 
-
-LOCAL_C_INCLUDES += 
-$(LOCAL_PATH)/../../editor-support/dragonbones 
-$(LOCAL_PATH)/../../editor-support/dragonbones/renderer/cocos2d-x-3.x 
-
 LOCAL_CFLAGS += -DDRAGON_BONES_ENABLE_LUA=1
 
-LOCAL_WHOLE_STATIC_LIBRARIES += dragonbones_static
-
-$(call import-module,editor-support/dragonbones/renderer/cocos2d-x-3.x/android)
-#end
-
+include $(BUILD_STATIC_LIBRARY)
 
 #$(call import-module,lua/luajit/prebuilt/android)
 $(call import-module,lua/lua)
 $(call import-module,.)
+$(call import-module,editor-support/dragonbones/renderer/cocos2d-x-3.x/android)

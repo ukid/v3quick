@@ -6,15 +6,29 @@
 
 --------------------------------
 -- 
--- @function [parent=#DBCCArmatureNode] getAnimation 
+-- @function [parent=#DBCCArmatureNode] registerAnimationEventHandler 
 -- @param self
--- @return Animation#Animation ret (return value: db.Animation)
+-- @param #int func
+-- @return DBCCArmatureNode#DBCCArmatureNode self (return value: db.DBCCArmatureNode)
         
 --------------------------------
 -- 
 -- @function [parent=#DBCCArmatureNode] getCCEventDispatcher 
 -- @param self
 -- @return EventDispatcher#EventDispatcher ret (return value: cc.EventDispatcher)
+        
+--------------------------------
+-- 
+-- @function [parent=#DBCCArmatureNode] registerFrameEventHandler 
+-- @param self
+-- @param #int func
+-- @return DBCCArmatureNode#DBCCArmatureNode self (return value: db.DBCCArmatureNode)
+        
+--------------------------------
+-- 
+-- @function [parent=#DBCCArmatureNode] getAnimation 
+-- @param self
+-- @return Animation#Animation ret (return value: db.Animation)
         
 --------------------------------
 -- 
@@ -37,9 +51,8 @@
         
 --------------------------------
 -- 
--- @function [parent=#DBCCArmatureNode] advanceTime 
+-- @function [parent=#DBCCArmatureNode] unregisterFrameEventHandler 
 -- @param self
--- @param #float dt
 -- @return DBCCArmatureNode#DBCCArmatureNode self (return value: db.DBCCArmatureNode)
         
 --------------------------------
@@ -55,6 +68,19 @@
 -- @function [parent=#DBCCArmatureNode] getCCDisplay 
 -- @param self
 -- @return Node#Node ret (return value: cc.Node)
+        
+--------------------------------
+-- 
+-- @function [parent=#DBCCArmatureNode] advanceTime 
+-- @param self
+-- @param #float dt
+-- @return DBCCArmatureNode#DBCCArmatureNode self (return value: db.DBCCArmatureNode)
+        
+--------------------------------
+-- 
+-- @function [parent=#DBCCArmatureNode] unregisterAnimationEventHandler 
+-- @param self
+-- @return DBCCArmatureNode#DBCCArmatureNode self (return value: db.DBCCArmatureNode)
         
 --------------------------------
 -- 

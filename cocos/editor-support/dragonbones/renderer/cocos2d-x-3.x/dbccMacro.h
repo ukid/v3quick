@@ -6,7 +6,7 @@
 #include "base/ccMacros.h"
 
 #ifndef DRAGON_BONES_ENABLE_LUA
-#define DRAGON_BONES_ENABLE_LUA 0
+#define DRAGON_BONES_ENABLE_LUA 1
 #endif // !DRAGON_BONES_ENABLE_LUA
 
 #undef DBASSERT
