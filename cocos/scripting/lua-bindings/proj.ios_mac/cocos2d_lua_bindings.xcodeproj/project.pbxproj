@@ -237,6 +237,8 @@
 		3E2BDB0619C5E5FE0055CDCD /* lua_cocos2dx_audioengine_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3E2BDB0419C5E5FE0055CDCD /* lua_cocos2dx_audioengine_auto.hpp */; };
 		3E2BDB0A19C5E6100055CDCD /* lua_cocos2dx_audioengine_manual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E2BDB0819C5E6100055CDCD /* lua_cocos2dx_audioengine_manual.cpp */; };
 		3E2BDB0B19C5E6100055CDCD /* lua_cocos2dx_audioengine_manual.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E2BDB0919C5E6100055CDCD /* lua_cocos2dx_audioengine_manual.h */; };
+		53107E151B16EBD5007C8AF5 /* lua_dragonbones_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53107E131B16EBD5007C8AF5 /* lua_dragonbones_auto.cpp */; };
+		53107E161B16EBD5007C8AF5 /* lua_dragonbones_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53107E141B16EBD5007C8AF5 /* lua_dragonbones_auto.hpp */; };
 		566F015F19B5EB0F00FCA620 /* CustomGUIReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 566F015D19B5EB0F00FCA620 /* CustomGUIReader.cpp */; };
 		566F016019B5EB0F00FCA620 /* CustomGUIReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 566F015D19B5EB0F00FCA620 /* CustomGUIReader.cpp */; };
 		566F016119B5EB0F00FCA620 /* CustomGUIReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 566F015E19B5EB0F00FCA620 /* CustomGUIReader.h */; };
@@ -510,6 +512,8 @@
 		3E2BDB0419C5E5FE0055CDCD /* lua_cocos2dx_audioengine_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_audioengine_auto.hpp; sourceTree = "<group>"; };
 		3E2BDB0819C5E6100055CDCD /* lua_cocos2dx_audioengine_manual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_audioengine_manual.cpp; sourceTree = "<group>"; };
 		3E2BDB0919C5E6100055CDCD /* lua_cocos2dx_audioengine_manual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_cocos2dx_audioengine_manual.h; sourceTree = "<group>"; };
+		53107E131B16EBD5007C8AF5 /* lua_dragonbones_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_dragonbones_auto.cpp; sourceTree = "<group>"; };
+		53107E141B16EBD5007C8AF5 /* lua_dragonbones_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_dragonbones_auto.hpp; sourceTree = "<group>"; };
 		566F015D19B5EB0F00FCA620 /* CustomGUIReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomGUIReader.cpp; sourceTree = "<group>"; };
 		566F015E19B5EB0F00FCA620 /* CustomGUIReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomGUIReader.h; sourceTree = "<group>"; };
 		DA1769EF1A1A0D12006F5EA8 /* lua_cocos2dx_assetsmanager_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_assetsmanager_auto.cpp; sourceTree = "<group>"; };
@@ -736,6 +740,8 @@
 		1AACE74818BC45C200215002 /* auto */ = {
 			isa = PBXGroup;
 			children = (
+				53107E131B16EBD5007C8AF5 /* lua_dragonbones_auto.cpp */,
+				53107E141B16EBD5007C8AF5 /* lua_dragonbones_auto.hpp */,
 				DA1769F51A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.cpp */,
 				DA1769F61A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.hpp */,
 				DA1769EF1A1A0D12006F5EA8 /* lua_cocos2dx_assetsmanager_auto.cpp */,
@@ -1021,6 +1027,7 @@
 				DA4B563E1A3AF60C00567969 /* lparser.h in Headers */,
 				15C1C2EA19874CBE00A46ACC /* CCLuaValue.h in Headers */,
 				DA1769F91A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.hpp in Headers */,
+				53107E161B16EBD5007C8AF5 /* lua_dragonbones_auto.hpp in Headers */,
 				155C7E0C19A71C9000F08B25 /* lua_cocos2dx_network_manual.h in Headers */,
 				DA4B56321A3AF60C00567969 /* llex.h in Headers */,
 				DA4B56211A3AF60C00567969 /* lauxlib.h in Headers */,
@@ -1303,6 +1310,7 @@
 				F4FE0D7619ECD02400B8B12B /* LuaTouchTargetNode.cpp in Sources */,
 				155C7E0A19A71C8B00F08B25 /* lua_cocos2dx_network_manual.cpp in Sources */,
 				DA4B56461A3AF60C00567969 /* ltablib.c in Sources */,
+				53107E151B16EBD5007C8AF5 /* lua_dragonbones_auto.cpp in Sources */,
 				DA4B563F1A3AF60C00567969 /* lstate.c in Sources */,
 				15415AD119A71A53004F1E71 /* timeout.c in Sources */,
 				15C1C2CF1987498B00A46ACC /* lua_cocos2dx_deprecated.cpp in Sources */,
@@ -1541,7 +1549,7 @@
 				);
 				PRODUCT_NAME = "libluacocos2d Mac";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/mac $(SRCROOT)/../../../../external/glfw3/include/mac";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/mac $(SRCROOT)/../../../../external/glfw3/include/mac $(SRCROOT)/../../../../cocos/editor-support/dragonbones/renderer/cocos2d-x-3.x $(SRCROOT)/../../../../cocos/editor-support/dragonbones";
 			};
 			name = Debug;
 		};
@@ -1568,7 +1576,7 @@
 				);
 				PRODUCT_NAME = "libluacocos2d Mac";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/mac $(SRCROOT)/../../../../external/glfw3/include/mac";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/mac $(SRCROOT)/../../../../external/glfw3/include/mac $(SRCROOT)/../../../../cocos/editor-support/dragonbones/renderer/cocos2d-x-3.x $(SRCROOT)/../../../../cocos/editor-support/dragonbones";
 			};
 			name = Release;
 		};
