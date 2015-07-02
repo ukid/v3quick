@@ -28,6 +28,7 @@
 		50D7C96C17EBBEDF005D0B91 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */; };
 		50D7C96E17EBBEE6005D0B91 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96D17EBBEE6005D0B91 /* AppKit.framework */; };
 		50D7C97017EBBEEC005D0B91 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96F17EBBEEC005D0B91 /* IOKit.framework */; };
+		53F9292C1B3035CB005E3554 /* sqlite3secure.c in Sources */ = {isa = PBXBuildFile; fileRef = 53F9292B1B3035CB005E3554 /* sqlite3secure.c */; };
 		87FD37D31A469FB700DFFB6F /* ConnectWaitLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87FD37CD1A469FB700DFFB6F /* ConnectWaitLayer.cpp */; };
 		87FD37D41A469FB700DFFB6F /* ConsoleCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87FD37CF1A469FB700DFFB6F /* ConsoleCommand.cpp */; };
 		87FD37D51A469FB700DFFB6F /* FileServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 87FD37D11A469FB700DFFB6F /* FileServer.cpp */; };
@@ -72,7 +73,6 @@
 		9F72898E1A24957700EE0234 /* lfs.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7289041A24957700EE0234 /* lfs.c */; };
 		9F72898F1A24957700EE0234 /* lpack.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7289071A24957700EE0234 /* lpack.c */; };
 		9F7289901A24957700EE0234 /* lsqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F72890A1A24957700EE0234 /* lsqlite3.c */; };
-		9F7289911A24957700EE0234 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F72890C1A24957700EE0234 /* sqlite3.c */; };
 		9F7289921A24957700EE0234 /* lua_extensions_more.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F72890E1A24957700EE0234 /* lua_extensions_more.c */; };
 		9F7289931A24957700EE0234 /* lua_zlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 9F7289111A24957700EE0234 /* lua_zlib.c */; };
 		9F7289941A24957700EE0234 /* ProjectConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F7289141A24957700EE0234 /* ProjectConfig.cpp */; };
@@ -192,6 +192,7 @@
 		50D7C96B17EBBEDF005D0B91 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		50D7C96D17EBBEE6005D0B91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		50D7C96F17EBBEEC005D0B91 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		53F9292B1B3035CB005E3554 /* sqlite3secure.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = sqlite3secure.c; path = ../../../../../external/sqlite3/include/sqlite3secure.c; sourceTree = "<group>"; };
 		8704AEC11A6C1B6000B9F882 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UncaughtExceptionHandler.h; path = ../Classes/UncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		87FD37CD1A469FB700DFFB6F /* ConnectWaitLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConnectWaitLayer.cpp; sourceTree = "<group>"; };
 		87FD37CE1A469FB700DFFB6F /* ConnectWaitLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectWaitLayer.h; sourceTree = "<group>"; };
@@ -839,6 +840,7 @@
 		9F7289091A24957700EE0234 /* lsqlite3 */ = {
 			isa = PBXGroup;
 			children = (
+				53F9292B1B3035CB005E3554 /* sqlite3secure.c */,
 				9F72890A1A24957700EE0234 /* lsqlite3.c */,
 				9F72890B1A24957700EE0234 /* lsqlite3.h */,
 				9F72890C1A24957700EE0234 /* sqlite3.c */,
@@ -1110,6 +1112,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F9292C1B3035CB005E3554 /* sqlite3secure.c in Sources */,
 				9F7289381A24957700EE0234 /* CCGrayFilter.cpp in Sources */,
 				9FD01B2519F8C6A3005E0C49 /* PlayerEditBoxServiceMac.mm in Sources */,
 				9FD01B2319F8C6A3005E0C49 /* NSApplication+SheetAdditions.m in Sources */,
@@ -1122,7 +1125,6 @@
 				C00FD4971938512100C6382D /* PlayEnable_png.cpp in Sources */,
 				9F72897B1A24957700EE0234 /* CCNative.mm in Sources */,
 				9F72893C1A24957700EE0234 /* CCRGBFilter.cpp in Sources */,
-				9F7289911A24957700EE0234 /* sqlite3.c in Sources */,
 				9F7289901A24957700EE0234 /* lsqlite3.c in Sources */,
 				9F7289421A24957700EE0234 /* ccFilterShaders.cpp in Sources */,
 				9F72898E1A24957700EE0234 /* lfs.c in Sources */,
@@ -1241,6 +1243,8 @@
 					GLFW_EXPOSE_NATIVE_NSGL,
 					CC_TARGET_OS_MAC,
 					"$(inherited)",
+					SQLITE_USER_AUTHENTICATION,
+					SQLITE_HAS_CODEC,
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = mac/Info.plist;
@@ -1275,6 +1279,8 @@
 					GLFW_EXPOSE_NATIVE_NSGL,
 					CC_TARGET_OS_MAC,
 					"$(inherited)",
+					SQLITE_USER_AUTHENTICATION,
+					SQLITE_HAS_CODEC,
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = mac/Info.plist;

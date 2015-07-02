@@ -239,10 +239,14 @@
 		3E2BDB0B19C5E6100055CDCD /* lua_cocos2dx_audioengine_manual.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E2BDB0919C5E6100055CDCD /* lua_cocos2dx_audioengine_manual.h */; };
 		53107E151B16EBD5007C8AF5 /* lua_dragonbones_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53107E131B16EBD5007C8AF5 /* lua_dragonbones_auto.cpp */; };
 		53107E161B16EBD5007C8AF5 /* lua_dragonbones_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53107E141B16EBD5007C8AF5 /* lua_dragonbones_auto.hpp */; };
+		53122B231B44412200793AB6 /* xxtea_file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DAC9C71A1A7F502300FB75C8 /* xxtea_file.cpp */; };
+		537515971B44560900A778FB /* lua_dragonbones_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53107E131B16EBD5007C8AF5 /* lua_dragonbones_auto.cpp */; };
+		537515981B44561B00A778FB /* lua_dragonbones_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53107E141B16EBD5007C8AF5 /* lua_dragonbones_auto.hpp */; };
 		566F015F19B5EB0F00FCA620 /* CustomGUIReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 566F015D19B5EB0F00FCA620 /* CustomGUIReader.cpp */; };
 		566F016019B5EB0F00FCA620 /* CustomGUIReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 566F015D19B5EB0F00FCA620 /* CustomGUIReader.cpp */; };
 		566F016119B5EB0F00FCA620 /* CustomGUIReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 566F015E19B5EB0F00FCA620 /* CustomGUIReader.h */; };
 		566F016219B5EB0F00FCA620 /* CustomGUIReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 566F015E19B5EB0F00FCA620 /* CustomGUIReader.h */; };
+		9F86CBC51B27C05700278836 /* xxtea_file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DAC9C71A1A7F502300FB75C8 /* xxtea_file.cpp */; };
 		DA1769F11A1A0D12006F5EA8 /* lua_cocos2dx_assetsmanager_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA1769EF1A1A0D12006F5EA8 /* lua_cocos2dx_assetsmanager_auto.cpp */; };
 		DA1769F21A1A0D12006F5EA8 /* lua_cocos2dx_assetsmanager_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA1769EF1A1A0D12006F5EA8 /* lua_cocos2dx_assetsmanager_auto.cpp */; };
 		DA1769F31A1A0D12006F5EA8 /* lua_cocos2dx_assetsmanager_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DA1769F01A1A0D12006F5EA8 /* lua_cocos2dx_assetsmanager_auto.hpp */; };
@@ -514,6 +518,28 @@
 		3E2BDB0919C5E6100055CDCD /* lua_cocos2dx_audioengine_manual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_cocos2dx_audioengine_manual.h; sourceTree = "<group>"; };
 		53107E131B16EBD5007C8AF5 /* lua_dragonbones_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_dragonbones_auto.cpp; sourceTree = "<group>"; };
 		53107E141B16EBD5007C8AF5 /* lua_dragonbones_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_dragonbones_auto.hpp; sourceTree = "<group>"; };
+		53EAFE461B4448CD0031CEEA /* Android.mk */ = {isa = PBXFileReference; lastKnownFileType = text; path = Android.mk; sourceTree = "<group>"; };
+		53EAFE471B4448CD0031CEEA /* DBCCArmature.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DBCCArmature.cpp; sourceTree = "<group>"; };
+		53EAFE481B4448CD0031CEEA /* DBCCArmature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBCCArmature.h; sourceTree = "<group>"; };
+		53EAFE491B4448CD0031CEEA /* DBCCArmatureNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DBCCArmatureNode.cpp; sourceTree = "<group>"; };
+		53EAFE4A1B4448CD0031CEEA /* DBCCArmatureNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBCCArmatureNode.h; sourceTree = "<group>"; };
+		53EAFE4B1B4448CD0031CEEA /* DBCCEventDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBCCEventDispatcher.h; sourceTree = "<group>"; };
+		53EAFE4C1B4448CD0031CEEA /* DBCCFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DBCCFactory.cpp; sourceTree = "<group>"; };
+		53EAFE4D1B4448CD0031CEEA /* DBCCFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBCCFactory.h; sourceTree = "<group>"; };
+		53EAFE4E1B4448CD0031CEEA /* DBCCLuaUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DBCCLuaUtils.cpp; sourceTree = "<group>"; };
+		53EAFE4F1B4448CD0031CEEA /* DBCCLuaUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBCCLuaUtils.h; sourceTree = "<group>"; };
+		53EAFE501B4448CD0031CEEA /* dbccMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dbccMacro.h; sourceTree = "<group>"; };
+		53EAFE511B4448CD0031CEEA /* DBCCRenderHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBCCRenderHeaders.h; sourceTree = "<group>"; };
+		53EAFE521B4448CD0031CEEA /* DBCCSlot.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DBCCSlot.cpp; sourceTree = "<group>"; };
+		53EAFE531B4448CD0031CEEA /* DBCCSlot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBCCSlot.h; sourceTree = "<group>"; };
+		53EAFE541B4448CD0031CEEA /* DBCCTextureAtlas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBCCTextureAtlas.h; sourceTree = "<group>"; };
+		53EAFE551B4448CD0031CEEA /* DBCCUtils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DBCCUtils.cpp; sourceTree = "<group>"; };
+		53EAFE561B4448CD0031CEEA /* DBCCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBCCUtils.h; sourceTree = "<group>"; };
+		53EAFE581B4448CD0031CEEA /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		53EAFE5A1B4448CD0031CEEA /* libDragonbones.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = libDragonbones.vcxproj; sourceTree = "<group>"; };
+		53EAFE5B1B4448CD0031CEEA /* libDragonbones.vcxproj.filters */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = libDragonbones.vcxproj.filters; sourceTree = "<group>"; };
+		53EAFE5C1B4448CD0031CEEA /* libDragonbones_demo.vcxproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = libDragonbones_demo.vcxproj; sourceTree = "<group>"; };
+		53EAFE5D1B4448CD0031CEEA /* libDragonbones_demo.vcxproj.filters */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = libDragonbones_demo.vcxproj.filters; sourceTree = "<group>"; };
 		566F015D19B5EB0F00FCA620 /* CustomGUIReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomGUIReader.cpp; sourceTree = "<group>"; };
 		566F015E19B5EB0F00FCA620 /* CustomGUIReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomGUIReader.h; sourceTree = "<group>"; };
 		DA1769EF1A1A0D12006F5EA8 /* lua_cocos2dx_assetsmanager_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_assetsmanager_auto.cpp; sourceTree = "<group>"; };
@@ -631,6 +657,7 @@
 		1551A334158F2AB200E66CFE = {
 			isa = PBXGroup;
 			children = (
+				53EAFE431B4448CD0031CEEA /* renderer */,
 				1ABCA1E218CD8F230087CE3A /* external */,
 				1AACE74818BC45C200215002 /* auto */,
 				1AACE75B18BC45C200215002 /* manual */,
@@ -900,6 +927,68 @@
 			path = audioengine;
 			sourceTree = "<group>";
 		};
+		53EAFE431B4448CD0031CEEA /* renderer */ = {
+			isa = PBXGroup;
+			children = (
+				53EAFE441B4448CD0031CEEA /* cocos2d-x-3.x */,
+			);
+			name = renderer;
+			path = "../../../editor-support/dragonbones/renderer";
+			sourceTree = "<group>";
+		};
+		53EAFE441B4448CD0031CEEA /* cocos2d-x-3.x */ = {
+			isa = PBXGroup;
+			children = (
+				53EAFE451B4448CD0031CEEA /* android */,
+				53EAFE471B4448CD0031CEEA /* DBCCArmature.cpp */,
+				53EAFE481B4448CD0031CEEA /* DBCCArmature.h */,
+				53EAFE491B4448CD0031CEEA /* DBCCArmatureNode.cpp */,
+				53EAFE4A1B4448CD0031CEEA /* DBCCArmatureNode.h */,
+				53EAFE4B1B4448CD0031CEEA /* DBCCEventDispatcher.h */,
+				53EAFE4C1B4448CD0031CEEA /* DBCCFactory.cpp */,
+				53EAFE4D1B4448CD0031CEEA /* DBCCFactory.h */,
+				53EAFE4E1B4448CD0031CEEA /* DBCCLuaUtils.cpp */,
+				53EAFE4F1B4448CD0031CEEA /* DBCCLuaUtils.h */,
+				53EAFE501B4448CD0031CEEA /* dbccMacro.h */,
+				53EAFE511B4448CD0031CEEA /* DBCCRenderHeaders.h */,
+				53EAFE521B4448CD0031CEEA /* DBCCSlot.cpp */,
+				53EAFE531B4448CD0031CEEA /* DBCCSlot.h */,
+				53EAFE541B4448CD0031CEEA /* DBCCTextureAtlas.h */,
+				53EAFE551B4448CD0031CEEA /* DBCCUtils.cpp */,
+				53EAFE561B4448CD0031CEEA /* DBCCUtils.h */,
+				53EAFE571B4448CD0031CEEA /* demo */,
+				53EAFE591B4448CD0031CEEA /* proj.win32 */,
+			);
+			path = "cocos2d-x-3.x";
+			sourceTree = "<group>";
+		};
+		53EAFE451B4448CD0031CEEA /* android */ = {
+			isa = PBXGroup;
+			children = (
+				53EAFE461B4448CD0031CEEA /* Android.mk */,
+			);
+			path = android;
+			sourceTree = "<group>";
+		};
+		53EAFE571B4448CD0031CEEA /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				53EAFE581B4448CD0031CEEA /* CMakeLists.txt */,
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
+		53EAFE591B4448CD0031CEEA /* proj.win32 */ = {
+			isa = PBXGroup;
+			children = (
+				53EAFE5A1B4448CD0031CEEA /* libDragonbones.vcxproj */,
+				53EAFE5B1B4448CD0031CEEA /* libDragonbones.vcxproj.filters */,
+				53EAFE5C1B4448CD0031CEEA /* libDragonbones_demo.vcxproj */,
+				53EAFE5D1B4448CD0031CEEA /* libDragonbones_demo.vcxproj.filters */,
+			);
+			path = proj.win32;
+			sourceTree = "<group>";
+		};
 		DA4B55E31A3AF60C00567969 /* lua */ = {
 			isa = PBXGroup;
 			children = (
@@ -1080,6 +1169,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537515981B44561B00A778FB /* lua_dragonbones_auto.hpp in Headers */,
 				DAC1A7B91A3AF952003BE8E0 /* ldo.h in Headers */,
 				15415AA819A71A53004F1E71 /* auxiliar.h in Headers */,
 				155C7E1119A71C9F00F08B25 /* lua_extensions.h in Headers */,
@@ -1348,6 +1438,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537515971B44560900A778FB /* lua_dragonbones_auto.cpp in Sources */,
+				53122B231B44412200793AB6 /* xxtea_file.cpp in Sources */,
 				DAC1A7DF1A3AF952003BE8E0 /* lvm.c in Sources */,
 				DAC1A7D91A3AF952003BE8E0 /* lua.c in Sources */,
 				15415AC619A71A53004F1E71 /* select.c in Sources */,
@@ -1372,6 +1464,7 @@
 				15EFA635198B328B000C57D3 /* CCLuaValue.cpp in Sources */,
 				15EFA636198B328B000C57D3 /* Cocos2dxLuaLoader.cpp in Sources */,
 				155C7DEB19A71BE900F08B25 /* lua_cocos2dx_cocosbuilder_auto.cpp in Sources */,
+				9F86CBC51B27C05700278836 /* xxtea_file.cpp in Sources */,
 				15EFA637198B328B000C57D3 /* LuaBasicConversions.cpp in Sources */,
 				15EFA638198B328B000C57D3 /* CCLuaObjcBridge.mm in Sources */,
 				DAC1A7B81A3AF952003BE8E0 /* ldo.c in Sources */,
@@ -1549,7 +1642,7 @@
 				);
 				PRODUCT_NAME = "libluacocos2d Mac";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/mac $(SRCROOT)/../../../../external/glfw3/include/mac $(SRCROOT)/../../../../cocos/editor-support/dragonbones/renderer/cocos2d-x-3.x $(SRCROOT)/../../../../cocos/editor-support/dragonbones";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/mac $(SRCROOT)/../../../../external/glfw3/include/mac $(SRCROOT)/../../../../cocos/editor-support/dragonbones";
 			};
 			name = Debug;
 		};
@@ -1576,7 +1669,7 @@
 				);
 				PRODUCT_NAME = "libluacocos2d Mac";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/mac $(SRCROOT)/../../../../external/glfw3/include/mac $(SRCROOT)/../../../../cocos/editor-support/dragonbones/renderer/cocos2d-x-3.x $(SRCROOT)/../../../../cocos/editor-support/dragonbones";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/mac $(SRCROOT)/../../../../external/glfw3/include/mac $(SRCROOT)/../../../../cocos/editor-support/dragonbones";
 			};
 			name = Release;
 		};
@@ -1602,7 +1695,7 @@
 				PRODUCT_NAME = "libluacocos2d iOS";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/ios";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/ios $(SRCROOT)/../../../../cocos/editor-support/dragonbones";
 			};
 			name = Debug;
 		};
@@ -1629,7 +1722,7 @@
 				PRODUCT_NAME = "libluacocos2d iOS";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/ios";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/ios $(SRCROOT)/../../../../cocos/editor-support/dragonbones";
 			};
 			name = Release;
 		};
