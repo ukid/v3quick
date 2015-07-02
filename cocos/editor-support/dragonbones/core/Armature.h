@@ -7,7 +7,7 @@
 #include "../animation/Animation.h"
 #include "../events/IEventDispatcher.h"
 #include "Slot.h"
-#include "geoms/Rectangle.h"
+#include "../geoms/Rectangle.h"
 
 NAME_SPACE_DRAGON_BONES_BEGIN
 

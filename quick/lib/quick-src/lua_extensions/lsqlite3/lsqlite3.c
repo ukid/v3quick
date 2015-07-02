@@ -1890,6 +1890,10 @@ static int lsqlite_do_open(lua_State *L, const char *filename) {
 
     if (sqlite3_open(filename, &db->db) == SQLITE_OK) {
         /* database handle already in the stack - return it */
+//        if (sqlite3_key(db->db, "C3EpCH3HFKsi", 12) != SQLITE_OK) {  
+//            /* database handle already in the stack - return it */  
+//            return 0;  
+//        }
         return 1;
     }
 
