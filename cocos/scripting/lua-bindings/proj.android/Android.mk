@@ -171,6 +171,15 @@ LOCAL_C_INCLUDES += \
 $(LOCAL_PATH)/../../../editor-support/dragonbones \
 $(LOCAL_PATH)/../../../editor-support/dragonbones/renderer/cocos2d-x-3.x  
 
+#talkingdata
+LOCAL_SRC_FILES +=  ../auto/lua_cocos2dx_TalkingDataGA_auto.cpp \
+                    ../auto/lua_cocos2dx_TDGAAccount_auto.cpp \
+                    ../auto/lua_cocos2dx_TDGAMission_auto.cpp \
+                    ../auto/lua_cocos2dx_TDGAVirtualCurrency_auto.cpp \
+                    ../auto/lua_cocos2dx_TDGAItem_auto.cpp  \
+
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../../../external/TalkingDataGameAnalytics/include \
+
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                            $(LOCAL_PATH)/../../../../external/lua/luajit/include \
                            $(LOCAL_PATH)/../auto \
@@ -190,6 +199,8 @@ LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
 
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2d_lua_android_static
 LOCAL_WHOLE_STATIC_LIBRARIES += dragonbones_static
+#talkingdata
+LOCAL_WHOLE_STATIC_LIBRARIES += cocos2dx-talkingdata
 
 LOCAL_STATIC_LIBRARIES := cocos2dx_static
 
@@ -201,3 +212,5 @@ include $(BUILD_STATIC_LIBRARY)
 $(call import-module,lua/lua)
 $(call import-module,.)
 $(call import-module,editor-support/dragonbones/renderer/cocos2d-x-3.x/android)
+#talkingdata
+$(call import-module,TalkingDataGameAnalytics/android)
