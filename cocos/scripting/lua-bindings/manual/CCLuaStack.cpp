@@ -56,6 +56,14 @@ extern "C" {
 
 #include "lua_dragonbones_auto.hpp"
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+#include "lua_cocos2dx_TalkingDataGA_auto.hpp"
+#include "lua_cocos2dx_TDGAAccount_auto.hpp"
+#include "lua_cocos2dx_TDGAMission_auto.hpp"
+#include "lua_cocos2dx_TDGAVirtualCurrency_auto.hpp"
+#include "lua_cocos2dx_TDGAItem_auto.hpp"
+#endif
+
 
 namespace {
 int lua_print(lua_State * luastate)
@@ -196,6 +204,14 @@ bool LuaStack::init(void)
 #if CC_USE_PHYSICS
     register_all_cocos2dx_physics(_state);
     register_all_cocos2dx_physics_manual(_state);
+#endif
+    
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+    register_all_cocos2dx_TalkingDataGA(_state);
+    register_all_cocos2dx_TDGAAccount(_state);
+    register_all_cocos2dx_TDGAMission(_state);
+    register_all_cocos2dx_TDGAVirtualCurrency(_state);
+    register_all_cocos2dx_TDGAItem(_state);
 #endif
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_MAC)
