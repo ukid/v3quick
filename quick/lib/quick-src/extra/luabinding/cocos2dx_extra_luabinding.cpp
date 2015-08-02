@@ -1,6 +1,6 @@
 /*
 ** Lua binding: cocos2dx_extra_luabinding
-** Generated automatically by tolua++-1.0.92 on Tue Jul 15 15:28:05 2014.
+** Generated automatically by tolua++-1.0.92 on Sun Aug  2 18:34:54 2015.
 */
 
 #include "cocos2dx_extra_luabinding.h"
@@ -31,10 +31,10 @@ static void tolua_reg_types (lua_State* tolua_S)
  tolua_usertype(tolua_S,"cc.Ref");
  tolua_usertype(tolua_S,"Network");
  tolua_usertype(tolua_S,"Crypto");
-
+ 
  tolua_usertype(tolua_S,"Native");
  tolua_usertype(tolua_S,"HTTPRequest");
-
+ 
 }
 
 /* method: getAES256KeyLength of class  Crypto */
@@ -89,7 +89,7 @@ static int tolua_cocos2dx_extra_luabinding_Crypto_encryptAES25600(lua_State* tol
   int keyLength = ((int)  tolua_tonumber(tolua_S,5,0));
   {
      Crypto::encryptAES256Lua(plaintext,plaintextLength,key,keyLength);
-
+   
   }
  }
  return 1;
@@ -125,7 +125,7 @@ static int tolua_cocos2dx_extra_luabinding_Crypto_decryptAES25600(lua_State* tol
   int keyLength = ((int)  tolua_tonumber(tolua_S,5,0));
   {
      Crypto::decryptAES256Lua(ciphertext,ciphertextLength,key,keyLength);
-
+   
   }
  }
  return 1;
@@ -161,7 +161,7 @@ static int tolua_cocos2dx_extra_luabinding_Crypto_encryptXXTEA00(lua_State* tolu
   int keyLength = ((int)  tolua_tonumber(tolua_S,5,0));
   {
      Crypto::encryptXXTEALua(plaintext,plaintextLength,key,keyLength);
-
+   
   }
  }
  return 1;
@@ -197,7 +197,7 @@ static int tolua_cocos2dx_extra_luabinding_Crypto_decryptXXTEA00(lua_State* tolu
   int keyLength = ((int)  tolua_tonumber(tolua_S,5,0));
   {
      Crypto::decryptXXTEALua(ciphertext,ciphertextLength,key,keyLength);
-
+   
   }
  }
  return 1;
@@ -229,7 +229,7 @@ static int tolua_cocos2dx_extra_luabinding_Crypto_encodeBase6400(lua_State* tolu
   int inputLength = ((int)  tolua_tonumber(tolua_S,3,0));
   {
      Crypto::encodeBase64Lua(input,inputLength);
-
+   
   }
  }
  return 1;
@@ -259,7 +259,7 @@ static int tolua_cocos2dx_extra_luabinding_Crypto_decodeBase6400(lua_State* tolu
   const char* input = ((const char*)  tolua_tostring(tolua_S,2,0));
   {
      Crypto::decodeBase64Lua(input);
-
+   
   }
  }
  return 1;
@@ -291,7 +291,7 @@ static int tolua_cocos2dx_extra_luabinding_Crypto_MD500(lua_State* tolua_S)
   bool isRawOutput = ((bool)  tolua_toboolean(tolua_S,3,0));
   {
      Crypto::MD5Lua(input,isRawOutput);
-
+   
   }
  }
  return 1;
@@ -321,7 +321,7 @@ static int tolua_cocos2dx_extra_luabinding_Crypto_MD5File00(lua_State* tolua_S)
   const char* path = ((const char*)  tolua_tostring(tolua_S,2,0));
   {
      Crypto::MD5FileLua(path);
-
+   
   }
  }
  return 1;
@@ -862,7 +862,8 @@ static int tolua_cocos2dx_extra_luabinding_HTTPRequest_setPOSTData00(lua_State* 
  if (
      !tolua_isusertype(tolua_S,1,"HTTPRequest",0,&tolua_err) ||
      !tolua_isstring(tolua_S,2,0,&tolua_err) ||
-     !tolua_isnoobj(tolua_S,3,&tolua_err)
+     !tolua_isnumber(tolua_S,3,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,4,&tolua_err)
  )
   goto tolua_lerror;
  else
@@ -870,11 +871,12 @@ static int tolua_cocos2dx_extra_luabinding_HTTPRequest_setPOSTData00(lua_State* 
  {
   HTTPRequest* self = (HTTPRequest*)  tolua_tousertype(tolua_S,1,0);
   const char* data = ((const char*)  tolua_tostring(tolua_S,2,0));
+  const int size = ((const int)  tolua_tonumber(tolua_S,3,0));
 #if COCOS2D_DEBUG >= 1
   if (!self) tolua_error(tolua_S,"invalid 'self' in function 'setPOSTData'", NULL);
 #endif
   {
-   self->setPOSTData(data);
+   self->setPOSTData(data,size);
   }
  }
  return 0;
@@ -1300,7 +1302,7 @@ static int tolua_cocos2dx_extra_luabinding_HTTPRequest_getResponseData00(lua_Sta
 #endif
   {
      self->getResponseDataLua();
-
+   
   }
  }
  return 1;
