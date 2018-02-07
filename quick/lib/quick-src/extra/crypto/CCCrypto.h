@@ -130,7 +130,7 @@ public:
 
     static LUA_STRING MD5FileLua(const char* path);
     
-    static LUA_STRING MD5StringLua(char* input, int inputLength);
+    static LUA_STRING MD5StringLua(const char* input, const int inputLength);
 
 #endif /* CC_LUA_ENGINE_ENABLED */
     

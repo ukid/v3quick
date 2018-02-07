@@ -85,10 +85,12 @@ using namespace cocos2d::experimental::ui;
 {
     if (self.moviePlayer != nullptr) {
         [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:self.moviePlayer];
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackStateDidChangeNotification object:self.moviePlayer];
+//        [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackStateDidChangeNotification object:self.moviePlayer];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerDidExitFullscreenNotification object:self.moviePlayer];
         
         [self.moviePlayer stop];
         [self.moviePlayer.view removeFromSuperview];
+        [self.moviePlayer autorelease];
         self.moviePlayer = nullptr;
         _videoPlayer = nullptr;
     }
@@ -126,19 +128,21 @@ using namespace cocos2d::experimental::ui;
 {
     if (self.moviePlayer != nullptr) {
         [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:self.moviePlayer];
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackStateDidChangeNotification object:self.moviePlayer];
+//        [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackStateDidChangeNotification object:self.moviePlayer];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerDidExitFullscreenNotification object:self.moviePlayer];
         
         [self.moviePlayer stop];
         [self.moviePlayer.view removeFromSuperview];
+        [self.moviePlayer autorelease];
         self.moviePlayer = nullptr;
     }
     
     if (videoSource == 1) {
-        self.moviePlayer = [[[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:@(videoUrl.c_str())]] autorelease];
+        self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:@(videoUrl.c_str())]];
         self.moviePlayer.movieSourceType = MPMovieSourceTypeStreaming;
     } else {
         NSString *path = [UIVideoViewWrapperIos fullPathFromRelativePath:@(videoUrl.c_str())];
-        self.moviePlayer = [[[MPMoviePlayerController alloc] initWithContentURL:[NSURL fileURLWithPath:path]] autorelease];
+        self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL fileURLWithPath:path]];
         self.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
     }
     self.moviePlayer.allowsAirPlay = false;
@@ -163,7 +167,10 @@ using namespace cocos2d::experimental::ui;
     [eaglview addSubview:self.moviePlayer.view];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoFinished:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.moviePlayer];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playStateChange) name:MPMoviePlayerPlaybackStateDidChangeNotification object:self.moviePlayer];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playStateChange) name:MPMoviePlayerPlaybackStateDidChangeNotification object:self.moviePlayer];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoFinished:) name:MPMoviePlayerDidExitFullscreenNotification object:self.moviePlayer];
+    
+    [self.moviePlayer setShouldAutoplay:FALSE];
 }
 
 -(void) videoFinished:(NSNotification *)notification
@@ -174,6 +181,11 @@ using namespace cocos2d::experimental::ui;
         {
             _videoPlayer->onPlayEvent((int)VideoPlayer::EventType::COMPLETED);
         }
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:self.moviePlayer];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerDidExitFullscreenNotification object:self.moviePlayer];
+        [self.moviePlayer.view setHidden:true];
+        [self.moviePlayer.view setAlpha:0];
+        self.moviePlayer.fullscreen=NO;
     }
 }
 
@@ -231,6 +243,16 @@ using namespace cocos2d::experimental::ui;
 {
     if (self.moviePlayer != NULL) {
         [self.moviePlayer.view setFrame:CGRectMake(_left, _top, _width, _height)];
+        //modify by weizi
+        //隐藏操控UI
+        self.moviePlayer.controlStyle =  MPMovieControlStyleNone;
+
+        self.moviePlayer.view.multipleTouchEnabled = NO;
+        self.moviePlayer.view.userInteractionEnabled = NO;
+////        释放时解决Autoresizing的bug
+//        self.moviePlayer.view.translatesAutoresizingMaskIntoConstraints=NO;
+
+        //modify by weizi end
         [self.moviePlayer play];
     }
 }

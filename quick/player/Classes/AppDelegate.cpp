@@ -78,7 +78,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     director->setDisplayStats(true);
     
     // set FPS. the default value is 1.0/60 if you don't call this
-    director->setAnimationInterval(1.0 / 60);
+    director->setAnimationInterval(1.0 / 30);
 	director->startAnimation();
 
     // register lua engine
@@ -91,7 +91,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     quick_module_register(L);
 
     LuaStack* stack = engine->getLuaStack();
-    stack->setXXTEAKeyAndSign("2dxLua", strlen("2dxLua"), "XXTEA", strlen("XXTEA"));
+    stack->setXXTEAKeyAndSign("RqAQq76CWvLZmgZk", strlen("RqAQq76CWvLZmgZk"), "xsPdzkVsR6Ep", strlen("xsPdzkVsR6Ep"));
     
     
     StartupCall *call = StartupCall::create(this);
